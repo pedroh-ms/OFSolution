@@ -5,7 +5,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
-      - POSTGRESQL_OF_CONNECTION_DEV=Server=database;Port=5432;Database=api_oficina_net;User Id=postgres;Password=supersecret!29
+      - POSTGRESQL_OF_CONNECTION_DEV=Server=database;Port=5432;Database=api_of_net;User Id=postgres;Password=supersecret!29
     ports:
       - "8080:80"
       - "44343:443"
