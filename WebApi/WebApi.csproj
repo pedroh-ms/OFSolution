@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>06bdd08d-207d-4138-9031-1fcec3170f02</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\NovaPasta\**" />
+    <Content Remove="Models\NovaPasta\**" />
+    <EmbeddedResource Remove="Models\NovaPasta\**" />
+    <None Remove="Models\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\CarroContext.cs" />
+    <Compile Remove="Models\DonoContext.cs" />
+    <Compile Remove="Models\MaterialCompradoContext.cs" />
+    <Compile Remove="Models\ServicoContext.cs" />
+    <Compile Remove="Repositories\CarroRepository.cs" />
+    <Compile Remove="Repositories\DonoRepository.cs" />
+    <Compile Remove="Repositories\ICarroRepository.cs" />
+    <Compile Remove="Repositories\IDonoRepository.cs" />
+    <Compile Remove="Repositories\IMaterialCompradoRepository.cs" />
+    <Compile Remove="Repositories\IServicoRepository.cs" />
+    <Compile Remove="Repositories\MaterialCompradoRepository.cs" />
+    <Compile Remove="Repositories\ServicoRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+</Project>

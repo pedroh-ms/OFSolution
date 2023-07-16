@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: .
+      dockerfile: WebApi\Dockerfile
+    depends_on:
+      - database
+
+  database:
+    image: postgres
+    restart: always
+    environment: 
+      POSTGRES_PASSWORD: supersecret!29
+      POSTGRES_USER: postgres
