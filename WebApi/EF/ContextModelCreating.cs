@@ -3,7 +3,7 @@ using WebApi.Models;
 
 namespace WebApi.EF
 {
-    public partial class OFContext : DbContext
+    public partial class Context : DbContext
     {
         public void DonoModelCreating(ModelBuilder modelBuilder)
         {

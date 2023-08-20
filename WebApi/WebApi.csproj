@@ -7,6 +7,7 @@
     <UserSecretsId>06bdd08d-207d-4138-9031-1fcec3170f02</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+	<DocumentationFile>DocFX\WebApi.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
