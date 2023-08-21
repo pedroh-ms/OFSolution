@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<OFContext>(options => options.UseNpgsql(Environment.GetEnvironmentVariable("POSTGRESQL_OF_CONNECTION_DEV")));
+builder.Services.AddDbContext<Context>(options => options.UseNpgsql(Environment.GetEnvironmentVariable("POSTGRESQL_OF_CONNECTION_DEV")));
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 var app = builder.Build();

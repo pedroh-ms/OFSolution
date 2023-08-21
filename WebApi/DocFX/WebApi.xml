@@ -1,0 +1,687 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:WebApi.Controllers.CarroController">
+            <summary>
+            This is the controller to perform the carro CRUD operations.
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.CarroController.Logger">
+            <value>
+            Gets the logger.
+            </value>
+        </member>
+        <member name="P:WebApi.Controllers.CarroController.Repository">
+            <value>
+            Gets the repository.
+            </value>
+        </member>
+        <member name="M:WebApi.Controllers.CarroController.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.CarroController},WebApi.Repositories.IRepository{WebApi.Models.CarroModel})">
+            <summary>
+            This constructor initializes the logger and repository.
+            </summary>
+            <param name="logger">The logger object.</param>
+            <param name="repository">The repository object.</param>
+        </member>
+        <member name="M:WebApi.Controllers.CarroController.Get">
+            <summary>
+            Gets all the records from the table <c>carros</c>.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns a <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:WebApi.Views.CarroView"/></returns>
+        </member>
+        <member name="M:WebApi.Controllers.CarroController.Get(System.Int32)">
+            <summary>
+            Get a record in table <c>carros</c> by its <c>id</c>.
+            </summary>
+            <param name="id">The <c>id</c> of the record in <c>carros</c> to be fetched.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns an <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult`1"/> of <see cref="T:WebApi.Views.CarroView"/> containing the data in the record with matched <c>id</c>.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.CarroController.Post(WebApi.Models.CarroFromBody)">
+            <summary>
+            Inserts a record with the data in <paramref name="carro"/>.
+            </summary>
+            <param name="carro">The mapped carro object containing the data to be inserted.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns an <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult`1"/> of <see cref="T:WebApi.Views.CarroView"/> with the data inserted.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.CarroController.Delete(System.Int32)">
+            <summary>
+            Deletes the record in table <c>carros</c> that matches the <c>id</c> in <paramref name="id"/>.
+            </summary>
+            <param name="id">The <c>id</c> of the record in <c>carros</c> to be deleted.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns a <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.CarroController.Put(System.Int32,WebApi.Models.CarroFromBody)">
+            <summary>
+            Updates the record in table <c>carros</c> that matches the <c>id</c> in <paramref name="id"/> with the data in <paramref name="carro"/>.
+            </summary>
+            <param name="id">The <c>id</c> of the record to be updated.</param>
+            <param name="carro">The carro object containing the data to update the record.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns a <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.CarroController.ToModel(WebApi.Models.CarroFromBody)">
+            <summary>
+            Method to convert <see cref="T:WebApi.Models.CarroFromBody"/> to <see cref="T:WebApi.Models.CarroModel"/>.
+            </summary>
+            <param name="carro">The <see cref="T:WebApi.Models.CarroFromBody"/> object to be converted.</param>
+            <returns>The converted <see cref="T:WebApi.Models.CarroModel"/> object.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.CarroController.ToView(WebApi.Models.CarroModel)">
+            <summary>
+            Method to convert <see cref="T:WebApi.Models.CarroModel"/> to <see cref="T:WebApi.Views.CarroView"/>.
+            </summary>
+            <param name="carro">The <see cref="T:WebApi.Models.CarroModel"/> object to be converted.</param>
+            <returns>The converted <see cref="T:WebApi.Views.CarroView"/> object.</returns>
+        </member>
+        <member name="T:WebApi.Controllers.DonoController">
+            <summary>
+            This is the controller to perform the dono CRUD operations.
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.DonoController.Logger">
+            <value>
+            Gets the logger.
+            </value>
+        </member>
+        <member name="P:WebApi.Controllers.DonoController.Repository">
+            <value>
+            Gets the repository.
+            </value>
+        </member>
+        <member name="M:WebApi.Controllers.DonoController.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.DonoController},WebApi.Repositories.IRepository{WebApi.Models.DonoModel})">
+            <summary>
+            This constructor initializes the logger and repository.
+            </summary>
+            <param name="logger">The logger object.</param>
+            <param name="repository">The repository object.</param>
+        </member>
+        <member name="M:WebApi.Controllers.DonoController.Get">
+            <summary>
+            Gets all the records from the table <c>donos</c>.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns a <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:WebApi.Views.DonoView"/></returns>
+        </member>
+        <member name="M:WebApi.Controllers.DonoController.Get(System.Int32)">
+            <summary>
+            Get a record in table <c>donos</c> by its <c>id</c>.
+            </summary>
+            <param name="id">The <c>id</c> of the record in <c>donos</c> to be fetched.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns an <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult`1"/> of <see cref="T:WebApi.Views.DonoView"/> containing the data in the record with matched <c>id</c>.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:WebApi.Controllers.DonoController.Post(WebApi.Models.DonoFromBody)" -->
+        <member name="M:WebApi.Controllers.DonoController.Delete(System.Int32)">
+            <summary>
+            Deletes the record in table <c>donos</c> that matches the <c>id</c> in <paramref name="id"/>.
+            </summary>
+            <param name="id">The <c>id</c> of the record in <c>donos</c> to be deleted.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns a <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.DonoController.Put(System.Int32,WebApi.Models.DonoFromBody)">
+            <summary>
+            Updates the record in table <c>donos</c> that matches the <c>id</c> in <paramref name="id"/> with the data in <paramref name="dono"/>.
+            </summary>
+            <param name="id">The <c>id</c> of the record to be updated.</param>
+            <param name="dono">The dono object containing the data to update the record.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns a <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.DonoController.ToModel(WebApi.Models.DonoFromBody)">
+            <summary>
+            Method to convert <see cref="T:WebApi.Models.DonoFromBody"/> to <see cref="T:WebApi.Models.DonoModel"/>.
+            </summary>
+            <param name="dono">The <see cref="T:WebApi.Models.DonoFromBody"/> object to be converted.</param>
+            <returns>The converted <see cref="T:WebApi.Models.DonoModel"/> object.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.DonoController.ToView(WebApi.Models.DonoModel)">
+            <summary>
+            Method to convert <see cref="T:WebApi.Models.DonoModel"/> to <see cref="T:WebApi.Views.DonoView"/>.
+            </summary>
+            <param name="dono">The <see cref="T:WebApi.Models.DonoModel"/> object to be converted.</param>
+            <returns>The converted <see cref="T:WebApi.Views.DonoView"/> object.</returns>
+        </member>
+        <member name="T:WebApi.Controllers.MaterialCompradoController">
+            <summary>
+            This is the controller to perform the material comprado CRUD operations.
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.MaterialCompradoController.Logger">
+            <value>
+            Gets the logger.
+            </value>
+        </member>
+        <member name="P:WebApi.Controllers.MaterialCompradoController.Repository">
+            <value>
+            Gets the repository.
+            </value>
+        </member>
+        <member name="M:WebApi.Controllers.MaterialCompradoController.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.MaterialCompradoController},WebApi.Repositories.IRepository{WebApi.Models.MaterialCompradoModel})">
+            <summary>
+            This constructor initializes the logger and repository.
+            </summary>
+            <param name="logger">The logger object.</param>
+            <param name="repository">The repository object.</param>
+        </member>
+        <member name="M:WebApi.Controllers.MaterialCompradoController.Get">
+            <summary>
+            Gets all the records from the table <c>material_comprados</c>.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns a <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:WebApi.Views.DonoView"/></returns>
+        </member>
+        <member name="M:WebApi.Controllers.MaterialCompradoController.Get(System.Int32)">
+            <summary>
+            Get a record in table <c>material_comprados</c> by its <c>id</c>.
+            </summary>
+            <param name="id">The <c>id</c> of the record in <c>material_comprados</c> to be fetched.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns an <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult`1"/> of <see cref="T:WebApi.Views.MaterialCompradoView"/> containing the data in the record with matched <c>id</c>.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:WebApi.Controllers.MaterialCompradoController.Post(WebApi.Models.MaterialCompradoFromBody)" -->
+        <member name="M:WebApi.Controllers.MaterialCompradoController.Delete(System.Int32)">
+            <summary>
+            Deletes the record in table <c>material_comprados</c> that matches the <c>id</c> in <paramref name="id"/>.
+            </summary>
+            <param name="id">The <c>id</c> of the record in <c>material_comprados</c> to be deleted.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns a <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.MaterialCompradoController.Put(System.Int32,WebApi.Models.MaterialCompradoFromBody)">
+            <summary>
+            Updates the record in table <c>material_comprados</c> that matches the <c>id</c> in <paramref name="id"/> with the data in <paramref name="materialComprado"/>.
+            </summary>
+            <param name="id">The <c>id</c> of the record to be updated.</param>
+            <param name="materialComprado">The material comprado object containing the data to update the record.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns a <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.MaterialCompradoController.ToModel(WebApi.Models.MaterialCompradoFromBody)">
+            <summary>
+            Method to convert <see cref="T:WebApi.Models.MaterialCompradoFromBody"/> to <see cref="T:WebApi.Models.MaterialCompradoModel"/>.
+            </summary>
+            <param name="materialComprado">The <see cref="T:WebApi.Models.MaterialCompradoFromBody"/> object to be converted.</param>
+            <returns>The converted <see cref="T:WebApi.Models.MaterialCompradoModel"/> object.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.MaterialCompradoController.ToView(WebApi.Models.MaterialCompradoModel)">
+            <summary>
+            Method to convert <see cref="T:WebApi.Models.MaterialCompradoModel"/> to <see cref="T:WebApi.Views.MaterialCompradoView"/>.
+            </summary>
+            <param name="materialComprado">The <see cref="T:WebApi.Models.MaterialCompradoModel"/> object to be converted.</param>
+            <returns>The converted <see cref="T:WebApi.Views.MaterialCompradoView"/> object.</returns>
+        </member>
+        <member name="T:WebApi.Controllers.ServicoController">
+            <summary>
+            This is the controller to perform the servico CRUD operations.
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.ServicoController.Logger">
+            <value>
+            Gets the logger.
+            </value>
+        </member>
+        <member name="P:WebApi.Controllers.ServicoController.Repository">
+            <value>
+            Gets the repository.
+            </value>
+        </member>
+        <member name="M:WebApi.Controllers.ServicoController.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.ServicoController},WebApi.Repositories.IRepository{WebApi.Models.ServicoModel})">
+            <summary>
+            This constructor initializes the logger and repository.
+            </summary>
+            <param name="logger">The logger object.</param>
+            <param name="repository">The repository object.</param>
+        </member>
+        <member name="M:WebApi.Controllers.ServicoController.Get">
+            <summary>
+            Gets all the records from the table <c>servicos</c>.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns a <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:WebApi.Views.ServicoView"/></returns>
+        </member>
+        <member name="M:WebApi.Controllers.ServicoController.Get(System.Int32)">
+            <summary>
+            Get a record in table <c>servicos</c> by its <c>id</c>.
+            </summary>
+            <param name="id">The <c>id</c> of the record in <c>servicos</c> to be fetched.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns an <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult`1"/> of <see cref="T:WebApi.Views.ServicoView"/> containing the data in the record with matched <c>id</c>.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:WebApi.Controllers.ServicoController.Post(WebApi.Models.ServicoFromBody)" -->
+        <member name="M:WebApi.Controllers.ServicoController.Delete(System.Int32)">
+            <summary>
+            Deletes the record in table <c>servicos</c> that matches the <c>id</c> in <paramref name="id"/>.
+            </summary>
+            <param name="id">The <c>id</c> of the record in <c>material_comprados</c> to be deleted.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns a <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.ServicoController.Put(System.Int32,WebApi.Models.ServicoFromBody)">
+            <summary>
+            Updates the record in table <c>servicos</c> that matches the <c>id</c> in <paramref name="id"/> with the data in <paramref name="servico"/>.
+            </summary>
+            <param name="id">The <c>id</c> of the record to be updated.</param>
+            <param name="servico">The servico object containing the data to update the record.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns a <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.ServicoController.ToModel(WebApi.Models.ServicoFromBody)">
+            <summary>
+            Method to convert <see cref="T:WebApi.Models.ServicoFromBody"/> to <see cref="T:WebApi.Models.ServicoModel"/>.
+            </summary>
+            <param name="servico">The <see cref="T:WebApi.Models.ServicoFromBody"/> object to be converted.</param>
+            <returns>The converted <see cref="T:WebApi.Models.ServicoModel"/> object.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.ServicoController.ToView(WebApi.Models.ServicoModel)">
+            <summary>
+            Method to convert <see cref="T:WebApi.Models.ServicoModel"/> to <see cref="T:WebApi.Views.ServicoView"/>.
+            </summary>
+            <param name="servico">The <see cref="T:WebApi.Models.ServicoModel"/> object to be converted.</param>
+            <returns>The converted <see cref="T:WebApi.Views.ServicoView"/> object.</returns>
+        </member>
+        <member name="T:WebApi.Models.BaseModel">
+            <summary>
+            Base model inherited by all models.
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.BaseModel.Id">
+            <value>
+            id column.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.BaseModel.InsertedAt">
+            <value>
+            inserted_at column.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.BaseModel.UpdatedAt">
+            <value>
+            updated_at column.
+            </value>
+        </member>
+        <member name="T:WebApi.Models.CarroFromBody">
+            <summary>
+            This is the class that maps the carro json from the body.
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.CarroFromBody.DonoId">
+            <value>
+            <c>donoId</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.CarroFromBody.Nome">
+            <value>
+            <c>nome</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.CarroFromBody.Cor">
+            <value>
+            <c>cor</c> attribute.
+            </value>
+        </member>
+        <member name="T:WebApi.Models.CarroModel">
+            <summary>
+            This is the <c>carros</c> table.
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.CarroModel.DonoId">
+            <value>
+            <c>dono_id</c> column.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.CarroModel.Nome">
+            <value>
+            <c>nome</c> column.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.CarroModel.Cor">
+            <value>
+            <c>cor</c> column.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.CarroModel.Dono">
+            <value>
+            <c>dono</c> object.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.CarroModel.Servicos">
+            <value>
+            bag of <c>servicos</c>.
+            </value>
+        </member>
+        <member name="T:WebApi.Models.DonoFromBody">
+            <summary>
+            This is the class that maps the dono json from the body.
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.DonoFromBody.Nome">
+            <value>
+            <c>nome</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.DonoFromBody.NumeroCelular">
+            <value>
+            <c>numeroCelular</c> attribure.
+            </value>
+        </member>
+        <member name="T:WebApi.Models.DonoModel">
+            <summary>
+            This is the <c>donos</c> table.
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.DonoModel.Nome">
+            <value>
+            <c>nome</c> column.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.DonoModel.NumeroCelular">
+            <value>
+            <c>numero_celular</c> column.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.DonoModel.Carros">
+            <value>
+            <c>bag</c> of carros.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.DonoModel.Servicos">
+            <value>
+            bag of <c>servicos</c>.</value>
+        </member>
+        <member name="T:WebApi.Models.MaterialCompradoFromBody">
+            <summary>
+            This is the class that maps the material comprado json from the body.
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.MaterialCompradoFromBody.Nome">
+            <value>
+            <c>nome</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.MaterialCompradoFromBody.Dia">
+            <value>
+            <c>dia</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.MaterialCompradoFromBody.Preco">
+            <value>
+            <c>preco</c> attribute.
+            </value>
+        </member>
+        <member name="T:WebApi.Models.MaterialCompradoModel">
+            <summary>
+            This is the <c>material_comprados</c> table.
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.MaterialCompradoModel.Nome">
+            <value>
+            <c>nome</c> column.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.MaterialCompradoModel.Dia">
+            <value>
+            <c>dia</c> column.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.MaterialCompradoModel.Preco">
+            <value>
+            <c>preco</c> column.
+            </value>
+        </member>
+        <member name="T:WebApi.Models.ServicoFromBody">
+            <summary>
+            This is the class that maps the servico json from the body.
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.ServicoFromBody.DonoId">
+            <value>
+            <c>donoId</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.ServicoFromBody.CarroId">
+            <value>
+            <c>carroId</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.ServicoFromBody.DataEntrega">
+            <value>
+            <c>dataEntrega</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.ServicoFromBody.Preco">
+            <value>
+            <c>preco</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.ServicoFromBody.Observacao">
+            <value>
+            <c>observacao</c> attribute.
+            </value>
+        </member>
+        <member name="T:WebApi.Models.ServicoModel">
+            <summary>
+            This is the <c>servicos</c> table.
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.ServicoModel.DonoId">
+            <value>
+            <c>dono_id</c> column.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.ServicoModel.CarroId">
+            <value>
+            <c>carro_id</c> column.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.ServicoModel.DataEntrega">
+            <value>
+            <c>data_entrega</c> column.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.ServicoModel.Preco">
+            <value>
+            <c>preco</c> column.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.ServicoModel.Observacao">
+            <value>
+            <c>observacao</c> column.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.ServicoModel.Dono">
+            <value>
+            <c>dono</c> object.
+            </value>
+        </member>
+        <member name="P:WebApi.Models.ServicoModel.Carro">
+            <value>
+            <c>carro</c> object.
+            </value>
+        </member>
+        <member name="T:WebApi.Repositories.IRepository`1">
+            <summary>
+            Generic repository for the Entity Framework Core.
+            </summary>
+            <typeparam name="T">A model class that inherits from BaseModel.</typeparam>
+        </member>
+        <member name="M:WebApi.Repositories.IRepository`1.Get">
+            <summary>
+            This method gets all the records from the database.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns all the records from the database.</returns>
+        </member>
+        <member name="M:WebApi.Repositories.IRepository`1.Get(System.Int32)">
+            <summary>
+            This method gets the record that matches the ID in the parameter.
+            </summary>
+            <param name="id">The ID of the record that will be fetched.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns the record.</returns>
+        </member>
+        <member name="M:WebApi.Repositories.IRepository`1.Create(`0)">
+            <summary>
+            This method inserts a new record into the database.
+            </summary>
+            <param name="record">The record to be inserted.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns the inserted record.</returns>
+        </member>
+        <member name="M:WebApi.Repositories.IRepository`1.Update(`0)">
+            <summary>
+            This method updates the record that matches the update object ID passed in the parameter.
+            </summary>
+            <param name="update">The object containing the data to be updated.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Repositories.IRepository`1.Delete(System.Int32)">
+            <summary>
+            This method deletes a record from the database.
+            </summary>
+            <param name="id">The ID of the record to be deleted.</param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Repositories.Repository`1">
+            <summary>
+            Generic repository for the Entity Framework Core.
+            </summary>
+            <typeparam name="T">A model class that inherits from BaseModel.</typeparam>
+        </member>
+        <member name="P:WebApi.Repositories.Repository`1.Context">
+            <value>Property <c>Context</c> gets the context object.</value>
+        </member>
+        <member name="M:WebApi.Repositories.Repository`1.#ctor(WebApi.EF.Context)">
+            <summary>
+            This constructor initializes the context object.
+            </summary>
+            <param name="context">The context object</param>
+        </member>
+        <member name="M:WebApi.Repositories.Repository`1.Create(`0)">
+            <summary>
+            This method inserts a new record into the database.
+            </summary>
+            <param name="record">The record to be inserted.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns the inserted record.</returns>
+        </member>
+        <member name="M:WebApi.Repositories.Repository`1.Delete(System.Int32)">
+            <summary>
+            This method deletes a record from the database.
+            </summary>
+            <param name="id">The ID of the record to be deleted.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Repositories.Repository`1.Get">
+            <summary>
+            This method gets all the records from the database.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns all the records from the database.</returns>
+        </member>
+        <member name="M:WebApi.Repositories.Repository`1.Get(System.Int32)">
+            <summary>
+            This method gets the record that matches the ID in the parameter.
+            </summary>
+            <param name="id">The ID of the record that will be fetched.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that returns the record.</returns>
+        </member>
+        <member name="M:WebApi.Repositories.Repository`1.Update(`0)">
+            <summary>
+            This method updates the record that matches the update object ID passed in the parameter.
+            </summary>
+            <param name="update">The object containing the data to be updated.</param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Views.CarroView">
+            <summary>
+            This is the view for carro.
+            </summary>
+        </member>
+        <member name="P:WebApi.Views.CarroView.Id">
+            <value>
+            <c>id</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Views.CarroView.DonoId">
+            <value>
+            <c>donoId</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Views.CarroView.Nome">
+            <value>
+            <c>nome</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Views.CarroView.Cor">
+            <value>
+            <c>cor</c> attribute.
+            </value>
+        </member>
+        <member name="T:WebApi.Views.DonoView">
+            <summary>
+            This is the view for dono.
+            </summary>
+        </member>
+        <member name="P:WebApi.Views.DonoView.Id">
+            <value>
+            <c>id</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Views.DonoView.Nome">
+            <value>
+            <c>nome</c> attribute
+            </value>
+        </member>
+        <member name="P:WebApi.Views.DonoView.NumeroCelular">
+            <value>
+            <c>numeroCelular</c> attribute.
+            </value>
+        </member>
+        <member name="T:WebApi.Views.MaterialCompradoView">
+            <summary>
+            This is the view for material comprado.
+            </summary>
+        </member>
+        <member name="P:WebApi.Views.MaterialCompradoView.Id">
+            <value>
+            <c>id</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Views.MaterialCompradoView.Nome">
+            <value>
+            <c>nome</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Views.MaterialCompradoView.Dia">
+            <value>
+            <c>dia</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Views.MaterialCompradoView.Preco">
+            <value>
+            <c>preco</c> attribute.
+            </value>
+        </member>
+        <member name="T:WebApi.Views.ServicoView">
+            <summary>
+            This is the view for servico.
+            </summary>
+        </member>
+        <member name="P:WebApi.Views.ServicoView.Id">
+            <value>
+            <c>id</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Views.ServicoView.DonoId">
+            <value>
+            <c>donoId</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Views.ServicoView.CarroId">
+            <value>
+            <c>carroId</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Views.ServicoView.DataEntrega">
+            <value>
+            <c>dataEntrega</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Views.ServicoView.Preco">
+            <value>
+            <c>preco</c> attribute.
+            </value>
+        </member>
+        <member name="P:WebApi.Views.ServicoView.Observacao">
+            <value>
+            <c>observacao</c> attribute.
+            </value>
+        </member>
+    </members>
+</doc>

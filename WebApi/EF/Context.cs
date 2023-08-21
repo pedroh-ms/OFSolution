@@ -2,9 +2,9 @@
 
 namespace WebApi.EF
 {
-    public partial class OFContext : DbContext
+    public partial class Context : DbContext
     {
-        public OFContext(DbContextOptions<OFContext> options) : base(options) 
+        public Context(DbContextOptions<Context> options) : base(options) 
         {
             Database.EnsureCreated();
         }
