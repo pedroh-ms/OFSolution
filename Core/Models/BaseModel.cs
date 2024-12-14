@@ -1,4 +1,4 @@
-﻿namespace WebApi.Models
+﻿namespace Core.Models
 {
     /// <summary>
     /// Base model inherited by all models.

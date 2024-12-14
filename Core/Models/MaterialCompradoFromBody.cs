@@ -1,20 +1,20 @@
-﻿namespace WebApi.Models
+﻿namespace Core.Models
 {
     /// <summary>
-    /// This is the <c>material_comprados</c> table.
+    /// This is the class that maps the material comprado json from the body.
     /// </summary>
-    public class MaterialCompradoModel : BaseModel
+    public class MaterialCompradoFromBody
     {
         /// <value>
-        /// <c>nome</c> column.
+        /// <c>nome</c> attribute.
         /// </value>
         public string? Nome { get; set; }
         /// <value>
-        /// <c>dia</c> column.
+        /// <c>dia</c> attribute.
         /// </value>
         public DateTime? Dia { get; set; }
         /// <value>
-        /// <c>preco</c> column.
+        /// <c>preco</c> attribute.
         /// </value>
         public decimal? Preco { get; set; }
     }

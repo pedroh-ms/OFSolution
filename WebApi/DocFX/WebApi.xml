@@ -9,7 +9,7 @@
             This is the controller to perform the carro CRUD operations.
             </summary>
         </member>
-        <member name="M:WebApi.Controllers.CarroController.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.CarroController},WebApi.Repositories.IRepository{WebApi.Models.CarroModel})">
+        <member name="M:WebApi.Controllers.CarroController.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.CarroController},WebApi.Repositories.IRepository{Core.Models.CarroModel})">
             <summary>
             This constructor initializes the logger and repository using the generic controller constructor.
             </summary>
@@ -92,7 +92,7 @@
             This is the controller to perform the dono CRUD operations.
             </summary>
         </member>
-        <member name="M:WebApi.Controllers.DonoController.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.DonoController},WebApi.Repositories.IRepository{WebApi.Models.DonoModel})">
+        <member name="M:WebApi.Controllers.DonoController.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.DonoController},WebApi.Repositories.IRepository{Core.Models.DonoModel})">
             <summary>
             This constructor initializes the logger and repository using the generic controller constructor.
             </summary>
@@ -104,7 +104,7 @@
             This is the controller to perform the material comprado CRUD operations.
             </summary>
         </member>
-        <member name="M:WebApi.Controllers.MaterialCompradoController.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.MaterialCompradoController},WebApi.Repositories.IRepository{WebApi.Models.MaterialCompradoModel})">
+        <member name="M:WebApi.Controllers.MaterialCompradoController.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.MaterialCompradoController},WebApi.Repositories.IRepository{Core.Models.MaterialCompradoModel})">
             <summary>
             This constructor initializes the logger and repository using the generic controller constructor.
             </summary>
@@ -116,231 +116,12 @@
             This is the controller to perform the servico CRUD operations.
             </summary>
         </member>
-        <member name="M:WebApi.Controllers.ServicoController.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.ServicoController},WebApi.Repositories.IRepository{WebApi.Models.ServicoModel})">
+        <member name="M:WebApi.Controllers.ServicoController.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.ServicoController},WebApi.Repositories.IRepository{Core.Models.ServicoModel})">
             <summary>
             This constructor initializes the logger and repository using the generic controller constructor.
             </summary>
             <param name="logger">The logger object.</param>
             <param name="repository">The repository object.</param>
-        </member>
-        <member name="T:WebApi.Models.BaseModel">
-            <summary>
-            Base model inherited by all models.
-            </summary>
-        </member>
-        <member name="P:WebApi.Models.BaseModel.Id">
-            <value>
-            id column.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.BaseModel.InsertedAt">
-            <value>
-            inserted_at column.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.BaseModel.UpdatedAt">
-            <value>
-            updated_at column.
-            </value>
-        </member>
-        <member name="T:WebApi.Models.CarroFromBody">
-            <summary>
-            This is the class that maps the carro json from the body.
-            </summary>
-        </member>
-        <member name="P:WebApi.Models.CarroFromBody.DonoId">
-            <value>
-            <c>donoId</c> attribute.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.CarroFromBody.Nome">
-            <value>
-            <c>nome</c> attribute.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.CarroFromBody.Cor">
-            <value>
-            <c>cor</c> attribute.
-            </value>
-        </member>
-        <member name="T:WebApi.Models.CarroModel">
-            <summary>
-            This is the <c>carros</c> table.
-            </summary>
-        </member>
-        <member name="P:WebApi.Models.CarroModel.DonoId">
-            <value>
-            <c>dono_id</c> column.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.CarroModel.Nome">
-            <value>
-            <c>nome</c> column.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.CarroModel.Cor">
-            <value>
-            <c>cor</c> column.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.CarroModel.Dono">
-            <value>
-            <c>dono</c> object.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.CarroModel.Servicos">
-            <value>
-            bag of <c>servicos</c>.
-            </value>
-        </member>
-        <member name="T:WebApi.Models.DonoFromBody">
-            <summary>
-            This is the class that maps the dono json from the body.
-            </summary>
-        </member>
-        <member name="P:WebApi.Models.DonoFromBody.Nome">
-            <value>
-            <c>nome</c> attribute.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.DonoFromBody.NumeroCelular">
-            <value>
-            <c>numeroCelular</c> attribure.
-            </value>
-        </member>
-        <member name="T:WebApi.Models.DonoModel">
-            <summary>
-            This is the <c>donos</c> table.
-            </summary>
-        </member>
-        <member name="P:WebApi.Models.DonoModel.Nome">
-            <value>
-            <c>nome</c> column.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.DonoModel.NumeroCelular">
-            <value>
-            <c>numero_celular</c> column.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.DonoModel.Carros">
-            <value>
-            <c>bag</c> of carros.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.DonoModel.Servicos">
-            <value>
-            bag of <c>servicos</c>.</value>
-        </member>
-        <member name="T:WebApi.Models.MaterialCompradoFromBody">
-            <summary>
-            This is the class that maps the material comprado json from the body.
-            </summary>
-        </member>
-        <member name="P:WebApi.Models.MaterialCompradoFromBody.Nome">
-            <value>
-            <c>nome</c> attribute.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.MaterialCompradoFromBody.Dia">
-            <value>
-            <c>dia</c> attribute.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.MaterialCompradoFromBody.Preco">
-            <value>
-            <c>preco</c> attribute.
-            </value>
-        </member>
-        <member name="T:WebApi.Models.MaterialCompradoModel">
-            <summary>
-            This is the <c>material_comprados</c> table.
-            </summary>
-        </member>
-        <member name="P:WebApi.Models.MaterialCompradoModel.Nome">
-            <value>
-            <c>nome</c> column.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.MaterialCompradoModel.Dia">
-            <value>
-            <c>dia</c> column.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.MaterialCompradoModel.Preco">
-            <value>
-            <c>preco</c> column.
-            </value>
-        </member>
-        <member name="T:WebApi.Models.ServicoFromBody">
-            <summary>
-            This is the class that maps the servico json from the body.
-            </summary>
-        </member>
-        <member name="P:WebApi.Models.ServicoFromBody.DonoId">
-            <value>
-            <c>donoId</c> attribute.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.ServicoFromBody.CarroId">
-            <value>
-            <c>carroId</c> attribute.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.ServicoFromBody.DataEntrega">
-            <value>
-            <c>dataEntrega</c> attribute.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.ServicoFromBody.Preco">
-            <value>
-            <c>preco</c> attribute.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.ServicoFromBody.Observacao">
-            <value>
-            <c>observacao</c> attribute.
-            </value>
-        </member>
-        <member name="T:WebApi.Models.ServicoModel">
-            <summary>
-            This is the <c>servicos</c> table.
-            </summary>
-        </member>
-        <member name="P:WebApi.Models.ServicoModel.DonoId">
-            <value>
-            <c>dono_id</c> column.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.ServicoModel.CarroId">
-            <value>
-            <c>carro_id</c> column.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.ServicoModel.DataEntrega">
-            <value>
-            <c>data_entrega</c> column.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.ServicoModel.Preco">
-            <value>
-            <c>preco</c> column.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.ServicoModel.Observacao">
-            <value>
-            <c>observacao</c> column.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.ServicoModel.Dono">
-            <value>
-            <c>dono</c> object.
-            </value>
-        </member>
-        <member name="P:WebApi.Models.ServicoModel.Carro">
-            <value>
-            <c>carro</c> object.
-            </value>
         </member>
         <member name="T:WebApi.Repositories.IRepository`1">
             <summary>

@@ -1,4 +1,4 @@
-﻿namespace WebApi.Models
+﻿namespace Core.Models
 {
     /// <summary>
     /// This is the class that maps the servico json from the body.
