@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using WebApi.Models;
+﻿using Core.Models;
+using Microsoft.AspNetCore.Mvc;
 using WebApi.Repositories;
-using WebApi.Views;
+
 
 namespace WebApi.Controllers
 {

@@ -1,6 +1,4 @@
-﻿using WebApi.Models;
-
-namespace WebApi.Repositories
+﻿namespace WebApi.Repositories
 {
     /// <summary>
     /// Generic repository for the Entity Framework Core.
